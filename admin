@@ -1,0 +1,7 @@
+button R0 C5 T"Cool Down" A"M98 P#0" L"/menu/cooldown"
+button R10 C5 T"Unload Filament" A"M702"
+button R20 C5 T"Level Bed" A"menu bedlevel"
+button R30 C5 T"Motors Off" A"M18"
+button R40 C5 T"Reboot Board" A"M999"
+button R51 C5 F0 T"<" A"return"
+value N534 C47 W80 H2
