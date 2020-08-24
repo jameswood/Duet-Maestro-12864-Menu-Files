@@ -1,30 +1,30 @@
-image R2 C2 L"nozzle.img"
-value N079 F1 R0  C15 W25 H0
-alter N179 F0 R13 C14 W25 H0
+image R3 C0 L"nozzle.img"
+value N079 F1 R0  C17 W19 H0
+alter N179 F0 R12 C16 W19 H0
 
-image R2 C47 L"bed.img"
-value N080 F1 R0  C60 W25 H0
-alter N180 F0 R13 C59 W25 H0
+image R3 C45 L"bed.img"
+value N080 F1 R0  C64 W19 H0
+alter N180 F0 R12 C63 W19 H0
 
-image R2 C94 L"fan.img"
-alter N300 F0 R3 C107 H0 W26
+image R3 C90 L"blower.img"
+alter N300 F0 R5 C108 H0 W26
 
 image R25 C0 L"hline.img"
 
-image R27 C4 L"bed.img"
-button C19 T"Off" A"M140 S0"
-button C45 T"50" A"M140 S50"
-button C68 T"80" A"M140 S80"
-button C87 T"90" A"M140 S90"
-button C108 T"110" V3 A"M140 S110"
+text R27 C0 T"Bed"
+button " Off" A"M140 S0"
+button " 50" A"M140 S50"
+button " 80" A"M140 S80"
+button " 90" A"M140 S90"
+button " 110" A"M140 S110"
 
-image R37 C4 L"nozzle.img"
-button C19 T"Off" A"M104 S0"
-button C41 T"180" A"M104 S180"
-button C62 T"200" A"M104 S200"
-button C83 T"210" A"M104 S210"
-button C104 T"235" A"M104 S235"
+text R37 C0 T"Head"
+button " Off" A"M104 S0"
+button " 180" A"M104 S180"
+button " 200" A"M104 S200"
+button " 210" A"M104 S210"
+button " 235" A"M104 S235"
 
-image R49 C0 L"hline.img"
+image R50 C0 L"hline.img"
 button R51 C0 F0 T"<" A"return"
 button T" Cool Down " A"M98 P#0" L"/menu/cooldown"

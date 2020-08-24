@@ -8,4 +8,4 @@ text "Speed: " R30 C0
 alter N500
 
 button R51 C0 F0 T"<" A"return"
-image R49 C0 L"hline.img"
+image R50 C0 L"hline.img"

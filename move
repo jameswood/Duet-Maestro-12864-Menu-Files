@@ -31,6 +31,6 @@ button C69 T"+1 "  A"G91 G1 Z1 F6000"
 button C87 T"+5 "  A"G91 G1 Z5 F6000"
 button C108 T"+25 " A"G91 G1 Z25 F6000"
 
-image R49 C0 L"hline.img"
+image R50 C0 L"hline.img"
 button R51 C0 F0 T"<" A"return"
 button T" Home All " A"M98 P/sys/homeall.g"
