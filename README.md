@@ -17,3 +17,7 @@ I took out a bunch of stuff I don't need, and simplified what was left. I used t
 Create a `/Bed` folder insude your `/macros` folder and fill it with the files in this `macros/Bed`. Edit them to make sure the bed levelling happens where you want it to - these defaults place the nozzle above the bed screws on a Creality CR10S.
 
 Upload the rest of the files to your /menu folder. Beware, any existing files with the same name will be overwritten, so you might want to back them up first.
+
+## Tools
+
+I used my [RRF image generator](https://github.com/jameswood/RepRapFirmware-Image-Tools) to create the images I've added or changed.
