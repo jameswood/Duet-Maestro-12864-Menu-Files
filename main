@@ -23,16 +23,16 @@ value N080 F1 R0  C64 W19 H0
 alter N180 F0 R12 C63 W19 H0
 
 image R3 C90 L"mms.img" ;V2
-value N539 F1 R0  C108 W19; V2 ; speed actual
-value N538 F0 R12 C108 W19; V2 ; speed requested
+value N539 F1 R0  C108 W19 ;V2 ; speed actual
+value N538 F0 R12 C108 W19 ;V2 ; speed requested
 
 image R23 C0 L"hline.img"
 
 image R24 C0 L"blower.img"
 alter N300 F0 R26 C16 H0 W26
 
-value N535 F0 C49 W25 H2 ;V2 ; % done
-value N537 F0 C89 W39 H2 ;V2 ; time left
+value N535 F0 C49 W25 H2 V2 ; % done
+value N537 F0 C89 W39 H2 V2 ; time left
 
-value N501 F0 R39 C0 W128 H1 ; V2 ; M117 messages
+value N501 F0 R39 C0 W128 H1 V2 ; M117 messages
 image R50 C0 L"hline.img"
