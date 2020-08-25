@@ -1,5 +1,5 @@
 text "Baby Step: " R0 C0
-alter N521
+alter N521 D2
 
 text "Flow Rate: " R15 C0
 alter N400

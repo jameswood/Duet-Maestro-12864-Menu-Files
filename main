@@ -7,7 +7,7 @@ button V5 " Print " A"menu listFiles"
 ; "Printing" Menu
 button R51 C2 F0 T" Tune " A"menu tune" V2
 button T" Pause " A"M25" V2 
-button T" Abort " A"M0 H1" V2
+button T" Abort " A"M25 M0 H1" V2
 
 ; "Paused" Menu
 button R51 C0 F0 V6 T" Resume " A"M24"
@@ -31,7 +31,7 @@ image R23 C0 L"hline.img"
 image R24 C0 L"blower.img"
 alter N300 F0 R26 C16 H0 W26
 
-value N535 F0 C49 W25 H2 V2 ; % done
+value N535 F0 C57 W25 H2 V2 ; % done
 value N537 F0 C89 W39 H2 V2 ; time left
 
 value N501 F0 R39 C0 W128 H1 V2 ; M117 messages
