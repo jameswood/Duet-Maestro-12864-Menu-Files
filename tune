@@ -1,11 +1,10 @@
-text "Baby Step: " R0 C0
+text "Baby Step: " R0 C0 F0
 alter N521 D2
 
-text "Flow Rate: " R15 C0
+text "Flow Rate: " R12 C0
 alter N400
 
-text "Speed: " R30 C0
+text "Speed: " R24 C0
 alter N500
 
 button R51 C0 F0 T"<" A"return"
-image R50 C0 L"hline.img"

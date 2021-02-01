@@ -1,8 +1,1 @@
-button R20 C2 T"Start" A"M98 P#0" L"0:/macros/Bed/Start"
-button R35 C40 T"1" A"M98 P#0" L"0:/macros/Bed/Point-A"
-button R35 C75 T"2" A"M98 P#0" L"0:/macros/Bed/Point-B"
-button R2 C75 T"3" A"M98 P#0" L"0:/macros/Bed/Point-C"
-button R2 C40 T"4" A"M98 P#0" L"0:/macros/Bed/Point-D"
-button R20 C57 T"*"  A"M98 P#0" L"0:/macros/Bed/Center"
-image R50 C0 L"hline.img"
-button R51 C5 F0 T"<" A"return"
+G32

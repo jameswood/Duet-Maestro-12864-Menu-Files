@@ -1,7 +1,9 @@
 text R0 C2 F0 T"x:"
-alter N510 D1 W26
+alter N510 D0 W26
+
 text C46 T"y:"
-alter N511 D1 W26
+alter N511 D0 W26
+
 text C88 T"z:"
 alter N512 D2 W32
 
@@ -34,3 +36,6 @@ button C108 T"+25 " A"G91 G1 Z25 F6000"
 image R50 C0 L"hline.img"
 button R51 C0 F0 T"<" A"return"
 button T" Home All " A"M98 P/sys/homeall.g"
+
+button T" Unsafe " A"M564 S0"
+button T" Safe " A"M564 S1"

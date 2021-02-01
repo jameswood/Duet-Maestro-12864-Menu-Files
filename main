@@ -1,38 +1,65 @@
-;"Not printing" Menu
-button R51 C0 F0 V5 T" Heat " A"menu heat"
-button V5 T" Move " A"menu move"
-button V5 " Admin " A"menu admin"
-button V5 " Print " A"menu listFiles"
+;---------------------------------------------------------------
+; Pre-print
+;---------------------------------------------------------------
 
-; "Printing" Menu
-button R51 C2 F0 T" Tune " A"menu tune" V2
-button T" Pause " A"M25" V2 
-button T" Abort " A"M25 M0 H1" V2
+image  V5 R12 C25 L"nozzle.img"
+image  V5 C88 L"bed.img"
 
-; "Paused" Menu
-button R51 C0 F0 V6 T" Resume " A"M24"
-button V6 T" Abort " A"M0 H1"
+value  V5 N079 R30 C12 H2 W19
+text T"/"
+alter  V5 N179 H0 W19
 
-; Main
-image R3 C0 L"nozzle.img"
-value N079 F1 R0  C17 W19 H0
-alter N179 F0 R12 C16 W19 H0
+value  V5 N080 C75 H2 W19
+text T"/"
+alter  V5 N180 H0 W19
 
-image R3 C45 L"bed.img"
-value N080 F1 R0  C64 W19 H0
-alter N180 F0 R12 C63 W19 H0
+image  V5 C1 R50 L"2buttop.img"
+image  V5 C1 R62 L"2buttop.img"
+image  V5 C1 R51 L"lbutside.img"
+image  V5 C62 R51 L"lbutside.img"
+button V5 "Print" A"menu listFiles" R51 C2 W60
 
-image R3 C90 L"mms.img" ;V2
-value N539 F1 R0  C108 W19 ;V2 ; speed actual
-value N538 F0 R12 C108 W19 ;V2 ; speed requested
+image  V5 C65 R51 L"lbutside.img"
+image  V5 C126 R51 L"lbutside.img"
+button V5 "Setup" A"menu setup" R51 C66 W60
 
-image R23 C0 L"hline.img"
 
-image R24 C0 L"blower.img"
-alter N300 F0 R26 C16 H0 W26
+;---------------------------------------------------------------
+; Printing
+;---------------------------------------------------------------
 
-value N535 F0 C57 W25 H2 V2 ; % done
-value N537 F0 C89 W39 H2 V2 ; time left
+button V4 R0 C0 A"M25" T" •• " ; pause
+image  V2 R1 C14 L"babystep.img"
+alter  V2 R0 N521 D2 ; babystep
+image  V2 R1 C52 L"speed.img"
+alter  V2 R0 N500 ; speed
+image  V2 R1 C94 L"flow.img"
+alter  V2 R0 N400 ; flow
 
-value N501 F0 R39 C0 W128 H1 V2 ; M117 messages
-image R50 C0 L"hline.img"
+image  V4 R17 C13 L"nozzle.img"
+image  V4 C57 L"bed.img"
+image  V4 C98 L"mms.img"
+
+value  V4 N079 R34 C0 H2 W19 ; nozzle temp
+text   V4 T"/"
+alter  V4 N179 H0 W19 ; nozzle temp set
+value  V4 N080 C43 H2 W19 ; bed temp
+text   V4 T"/"
+alter  V4 N180 H0 W19 ; bed temp set
+value  V4 N539 C86 H2 W19 ; speed actual
+text   V4 T"/"
+value  V4 N538 H0 W19 ; speed requested
+
+image  V4 R48 C0 L"blower.img"
+alter  V4 N300 F0 R51 C17 H0 W19 ; fan set
+value  V4 N535 F0 C57 W19 H1 ; % done
+value  V4 N537 F0 C88 W40 H2 ; time left
+
+;button T"." A"menu main"
+
+;---------------------------------------------------------------
+; Paused
+;---------------------------------------------------------------
+
+button V6 R0 C14 W57 F0 T" Resume " A"M24"
+button V6 W57 T" Abort " A"M0 H1"
