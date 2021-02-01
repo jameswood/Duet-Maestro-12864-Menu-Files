@@ -1,0 +1,34 @@
+image  C01 R02 L"lbutside.img"
+image  C01 R01 L"2buttop.img"
+image  C01 R13 L"2buttop.img"
+image  C62 R02 L"lbutside.img"
+button C02 R02 W60 T"Home All"  A"G28"
+
+image  C65 R02 L"lbutside.img"
+image C126 R02 L"lbutside.img"
+button C66 R02 W60 T"Move"  A"menu move"
+
+image  C01 R17 L"lbutside.img"
+image  C01 R16 L"2buttop.img"
+image  C01 R28 L"2buttop.img"
+image  C62 R17 L"lbutside.img"
+button C02 R17 W60 T"Level Bed" A"G32|return"
+
+image  C65 R17 L"lbutside.img"
+image C126 R17 L"lbutside.img"
+button C66 R17 W60 T"Tuning"  A"menu tune"
+
+image  C01 R35 L"3buttop.img"
+image  C01 R47 L"3buttop.img"
+image  C01 R36 L"lbutside.img"
+image  C41 R36 L"lbutside.img"
+image  C44 R36 L"lbutside.img"
+image  C83 R36 L"lbutside.img"
+image  C86 R36 L"lbutside.img"
+image C126 R36 L"lbutside.img"
+button C02 R36 W39 T"Relax"  A"M18|return"
+button C45 R36 W38 T"Cool"   A"M98 P#0" L"/menu/cooldown"
+button C87 R36 W39 T"Unload" A"M702|return"
+
+button C02 R51 F0 T"<" A"return"
+value N534 C46 H2 W80 ; IP Address
