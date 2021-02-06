@@ -2,15 +2,18 @@
 ; Pre-print
 ;---------------------------------------------------------------
 
-image  V5 R12 C25 L"nozzle.img"
-image  V5 C88 L"bed.img"
+image  V5 R12 C13 L"nozzle.img"
+image  V5 C57 L"blower.img"
+image  V5 C98 L"bed.img"
 
-value  V5 N079 R30 C12 H2 W19
-text T"/"
+value  V5 N079 R30 C0 H2 W19
+text   V5 T"/"
 alter  V5 N179 H0 W19
 
-value  V5 N080 C75 H2 W19
-text T"/"
+alter  V5 N300 C54 H1 W20 ; fan set
+
+value  V5 N080 C84 H2 W19
+text   V5 T"/"
 alter  V5 N180 H0 W19
 
 image  V5 C1 R50 L"2buttop.img"
@@ -23,43 +26,40 @@ image  V5 C65 R51 L"lbutside.img"
 image  V5 C126 R51 L"lbutside.img"
 button V5 "Setup" A"menu setup" R51 C66 W60
 
+;---------------------------------------------------------------
+; Paused
+;---------------------------------------------------------------
+
+button V6 R0 C0 W43 F0 T" Resume " A"M24"
+button V6 W42 T"Tune" A"menu tune"
+button V6 W43 T" Abort " A"M0 H1"
 
 ;---------------------------------------------------------------
 ; Printing
 ;---------------------------------------------------------------
 
-button V4 R0 C0 A"M25" T" •• " ; pause
+button V2 R0 C0 A"M25" T" •• " ; pause
 image  V2 R1 C14 L"babystep.img"
 alter  V2 R0 N521 D2 ; babystep
 image  V2 R1 C52 L"speed.img"
 alter  V2 R0 N500 ; speed
 image  V2 R1 C94 L"flow.img"
 alter  V2 R0 N400 ; flow
-
 image  V4 R17 C13 L"nozzle.img"
 image  V4 C57 L"bed.img"
 image  V4 C98 L"mms.img"
-
-value  V4 N079 R34 C0 H2 W19 ; nozzle temp
+value  V4 N079 R34 C0 H2 W20 ; nozzle temp
 text   V4 T"/"
-alter  V4 N179 H0 W19 ; nozzle temp set
-value  V4 N080 C43 H2 W19 ; bed temp
+alter  V4 N179 H0 W20 ; nozzle temp set
+value  V4 N080 C45 H2 W20 ; bed temp
 text   V4 T"/"
-alter  V4 N180 H0 W19 ; bed temp set
-value  V4 N539 C86 H2 W19 ; speed actual
+alter  V4 N180 H0 W20 ; bed temp set
+value  V4 N539 C86 H2 W20 ; speed actual
 text   V4 T"/"
-value  V4 N538 H0 W19 ; speed requested
-
+value  V4 N538 H0 W20 ; speed requested
 image  V4 R48 C0 L"blower.img"
-alter  V4 N300 F0 R51 C17 H0 W19 ; fan set
-value  V4 N535 F0 C57 W19 H1 ; % done
+alter  V4 N300 F0 R51 C16 H0 W20 ; fan set
+value  V4 N535 F0 C58 W20 H1 ; % done
 value  V4 N537 F0 C88 W40 H2 ; time left
 
-;button T"." A"menu main"
-
-;---------------------------------------------------------------
-; Paused
-;---------------------------------------------------------------
-
-button V6 R0 C14 W57 F0 T" Resume " A"M24"
-button V6 W57 T" Abort " A"M0 H1"
+;button C0 R0 T"." A"menu printingtest"
