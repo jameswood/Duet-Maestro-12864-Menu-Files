@@ -10,7 +10,7 @@ value  V5 N079 R30 C0 H2 W19
 text   V5 T"/"
 alter  V5 N179 H0 W19
 
-alter  V5 N300 C54 H1 W20 ; fan set
+alter  V5 N300 C52 H1 W24 ; fan set
 
 value  V5 N080 C84 H2 W19
 text   V5 T"/"
